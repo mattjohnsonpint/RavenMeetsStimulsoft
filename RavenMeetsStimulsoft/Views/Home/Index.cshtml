@@ -1,0 +1,22 @@
+﻿@using Stimulsoft.Report.MvcMobile;
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Report Viewer</title>
+        @Html.Stimulsoft().RenderMvcMobileViewerScripts()
+    </head>
+    <body>
+        <div>
+            @Html.Stimulsoft().StiMvcMobileViewer(new StiMvcMobileViewerOptions
+            {
+                ActionGetReportSnapshot = "GetReportSnapshot",
+                ActionViewerEvent = "ViewerEvent",
+                ActionPrintReport = "PrintReport",
+                ActionExportReport = "ExportReport",
+                FullScreen = true
+            })
+        </div>
+    </body>
+</html>
